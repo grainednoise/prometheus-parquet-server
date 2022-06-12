@@ -12,10 +12,14 @@ Its primary use case is in making it easy to explore saved metrics data
 that were previously collected, for instance, during testing. It is 
 developed with Grafana in mind as its exploration tool.
 
+## Licence
+
+MIT
+
 ## Building/installing the project
 
 This is a standard Rust project, so all the standard Cargo commands should
-just work, like `cargo build` and `cargo install`. It's developed with the
+just work, like `cargo build` and `cargo install`. It's developed using the
 latest stable Rust version, which is `1.61.0` at the time of writing.
 
 ## Zipped `.parquet` files
@@ -43,7 +47,7 @@ following content:
 ```Yaml
   ---
   config:
-  skip-unmapped: true
+  skip-unmapped: false
 ```
 
 This file is a way to handle name collisions, and re-tag certain
@@ -105,3 +109,10 @@ The currently supported set of features is really limited:
 
   - `/api/v1/labels`
   - `/api/v1/label/{label_name}/values`
+
+## Links/references
+
+- [Prometheus API definition](https://prometheus.io/docs/prometheus/latest/querying/api/)
+- [Prometheus querying basics](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+- [Prometheus query functions](https://prometheus.io/docs/prometheus/latest/querying/functions/)
+- [Prometheus histograms & summaries](https://prometheus.io/docs/practices/histograms/)
